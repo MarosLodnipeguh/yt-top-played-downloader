@@ -14,13 +14,16 @@ Perfect for trips without internet access, where you still want to bring your fa
 4. Choose the number of top songs you want to download
 5. Click the "Download all" button and wait for the download to finish
 
+Works only on Windows, due to yt-dlp.exe executable file.
+
+## Preview:
+<img width="1000" src="https://raw.githubusercontent.com/MarosLodnipeguh/yt-top-played-download/master/preview.png" alt="" />
+
 ## Technologies used:
 - Java with JavaFX (fxml + CSS) for the GUI
 - Jackson library for parsing the json file
-- yt-dlp.exe for downloading the audio files
+- [yt-dlp project](https://github.com/yt-dlp/yt-dlp) for downloading the audio files
 - Java ProcessBuilder for running the yt-dlp.exe process
-
-## Screenshots:
 
 ## TODO / Future improvements:
 - [ ] Java executable for Windows
