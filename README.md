@@ -23,12 +23,12 @@ Perfect for trips without internet access, where you still want to bring your fa
 ## Screenshots:
 
 ## TODO / Future improvements:
-- Java executable for Windows
-- console logs pass to the GUI, non-blocking, currently the GUI freezes during the download process
-- [ ] add a progress bar for the download process
-- Threaded downloading process
-- Show artists in the list
-- Lazy background image loading, with a blurry placeholder for the list view (non-blocking for the UI)
-- Charts for the top artists, top genres, etc. (in a separate tab)
-- Audio downloader with trimmer using ffmpeg (in a separate tab, basically a GUI for yt-dlp with trimming capabilities)
-- auto updater for yt-dlp.exe
+- [ ] Java executable for Windows
+- [ ] Console logs pass to the GUI, non-blocking, currently the GUI freezes during the download process
+- [ ] Add a progress bar for the download process
+- [ ] Threaded downloading process
+- [ ] Show artists in the list
+- [ ] Lazy background image loading, with a blurry placeholder for the list view (non-blocking for the UI)
+- [ ] Charts for the top artists, top genres, etc. (in a separate tab)
+- [ ] Audio downloader with trimmer using ffmpeg (in a separate tab, basically a GUI for yt-dlp with trimming capabilities)
+- [ ] Add a auto updater for yt-dlp.exe
