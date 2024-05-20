@@ -8,13 +8,14 @@
 Perfect for trips without internet access, where you still want to bring your favourite music with you. Or just for creating a local backup of your beloved music 😌
 
 ## How to use:
+Currently you you need a java IDE to run this
 1. Download your Google Takeout data from https://takeout.google.com/ (scroll down to YouTube and select only the "watch history" option, don't forget to set the format to JSON. then follow the instructions to download the data)
 2. Unzip the downloaded file and navigate to the "YouTube and YouTube Music" folder
 3. Find the "watch-history.json" file and provide it to the application
 4. Choose the number of top songs you want to download
 5. Click the "Download all" button and wait for the download to finish
 
-Works only on Windows, due to yt-dlp.exe executable file.
+Works only for Windows, due to yt-dlp.exe executable file.
 
 ## Preview:
 <img width="1000" src="https://raw.githubusercontent.com/MarosLodnipeguh/yt-top-played-download/master/preview.png" alt="" />
