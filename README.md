@@ -1,4 +1,4 @@
-# YouTube Top played downloader
+# YouTube Top played downloader with GUI
 
 ## A YouTube / YouTube Music utility allowing you to download your most played songs
 
