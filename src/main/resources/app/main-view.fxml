@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="CENTER" spacing="12.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainController">
+
+    <!-- App Bar -->
+    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1201.0" styleClass="app-bar">
+      <ImageView fitHeight="63.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+<!--            <Image url="@logo2.png" />-->
+            <Image url="@logo.jpg" />
+         </image>
+      </ImageView>
+        <Label styleClass="app-bar-title" text="YT History reader &amp; Audio downloader">
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+        </Label>
+    </HBox>
+
+
+<!--    <padding>-->
+<!--        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />-->
+<!--    </padding>-->
+
+   <HBox prefHeight="35.0" prefWidth="1201.0">
+      <children>
+          <Button fx:id="jsonButton" minWidth="205.0" onAction="#chooseJsonFile" prefHeight="36.0" prefWidth="213.0" text="Select Watch history JSON file">
+            <HBox.margin>
+               <Insets left="12.0" right="12.0" />
+            </HBox.margin></Button>
+          <TextField fx:id="jsonPathField" alignment="CENTER" editable="false" prefHeight="43.0" prefWidth="500" promptText="choose a file...">
+            <HBox.margin>
+               <Insets right="12.0" />
+            </HBox.margin></TextField>
+
+          <VBox prefHeight="30" prefWidth="500">
+              <Hyperlink onAction="#openLink" text="Get your YouTube watch history JSON file here"/>
+              <Label text="This applicaton works locally, your history is not sent anywhere."/>
+          </VBox>
+      </children>
+   </HBox>
+
+   <Line endX="600.0" startX="-600.0" stroke="#0000003d" />
+
+   <HBox prefHeight="35.0" prefWidth="1201.0">
+      <children>
+          <Label fx:id="count" prefHeight="35.0" prefWidth="261.0" text="Number of top watched videos to show:">
+            <HBox.margin>
+               <Insets left="12.0" />
+            </HBox.margin></Label>
+          <TextField fx:id="numberOfEntriesField" prefHeight="36.0" prefWidth="59.0" text="10">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin></TextField>
+          <Button fx:id="applyButton" alignment="CENTER" minWidth="70.0" onAction="#populateTableView" prefHeight="36.0" prefWidth="70.0" text="Apply">
+            <HBox.margin>
+               <Insets left="12.0" />
+            </HBox.margin></Button>
+           <CheckBox onAction="#checkYT" selected="true" text="Include Youtube">
+            <HBox.margin>
+               <Insets left="12.0" />
+            </HBox.margin>
+         </CheckBox>
+           <CheckBox onAction="#checkMusic" selected="true" text="Include YT Music">
+            <HBox.margin>
+               <Insets left="12.0" />
+            </HBox.margin>
+         </CheckBox>
+      </children>
+   </HBox>
+
+   <HBox prefHeight="34.0" prefWidth="1201.0">
+      <children>
+         <TextField fx:id="statusText" editable="false" prefHeight="36.0" prefWidth="876.0" text="Status: Waiting for JSON history file">
+            <HBox.margin>
+               <Insets left="12.0" />
+            </HBox.margin></TextField>
+      </children>
+   </HBox>
+
+
+
+
+
+   <TableView fx:id="tableView" layoutX="50.0" layoutY="50.0" prefHeight="450.0" prefWidth="1201.0">
+     <columns>
+         <TableColumn fx:id="number" maxWidth="2000.0" minWidth="30.0" prefWidth="30" text="No." />
+         <TableColumn fx:id="Thumbnail" maxWidth="2000.0" minWidth="30.0" prefWidth="190.0" text="Thumbnail" />
+         <TableColumn fx:id="Title" maxWidth="4000.0" minWidth="30.0" prefWidth="300.0" text="Title" />
+         <TableColumn prefWidth="205.0" text="Author" />
+         <TableColumn fx:id="playCount" maxWidth="900.0" minWidth="30.0" prefWidth="98.0" text="Times played" />
+         <TableColumn fx:id="URL" maxWidth="3000.0" minWidth="30.0" prefWidth="136.0" text="video ID" />
+         <TableColumn fx:id="buttonCol" prefWidth="177.0" />
+     </columns>
+   </TableView>
+
+   <HBox>
+      <children>
+          <Button minWidth="205.0" onAction="#chooseDirectory" prefHeight="36.0" prefWidth="213.0" text="Choose Download Directory" textAlignment="CENTER">
+            <HBox.margin>
+               <Insets left="12.0" right="12.0" />
+            </HBox.margin></Button>
+          <TextField fx:id="downloadDirField" alignment="CENTER" editable="false" prefHeight="37.0" prefWidth="380.0" promptText="choose a folder...">
+            <HBox.margin>
+               <Insets right="12.0" />
+            </HBox.margin></TextField>
+          <Button fx:id="downloadButton" alignment="CENTER" minWidth="205.0" onAction="#downloadAll" prefHeight="36.0" prefWidth="205.0" text="Download all">
+            <HBox.margin>
+               <Insets left="300.0" right="12.0" />
+            </HBox.margin></Button>
+      </children>
+      <VBox.margin>
+         <Insets bottom="12.0" />
+      </VBox.margin>
+   </HBox>
+
+</VBox>

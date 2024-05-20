@@ -1,0 +1,86 @@
+.root {
+    -fx-background-color: #ffffff;
+}
+
+VBox {
+    -fx-spacing: 20;
+    /*-fx-padding: 20;*/
+}
+
+HBox {
+    -fx-spacing: 10;
+}
+
+Button, CheckBox {
+    -fx-background-color: #892150;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 12;
+    /*-fx-border-radius: 4px;*/
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+
+    -fx-background-radius: 40; /* Rounded corners with a radius of 10 pixels */
+    -fx-border-radius: 40; /* Ensure that if there's a border, it also has rounded corners */
+}
+
+#jsonButton {
+    -fx-background-color: #a39512;
+}
+#jsonButton:hover {
+    -fx-background-color: #202324;
+}
+
+#applyButton, #downloadButton {
+    -fx-background-color: #0eb56d;
+}
+#applyButton:hover, #downloadButton:hover {
+    -fx-background-color: #202324;
+}
+
+
+
+Button:hover, CheckBox:hover {
+    -fx-background-color: #202324;
+}
+
+
+TextField, Label {
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+}
+
+TableView {
+    -fx-background-color: #fff;
+}
+
+TableColumn {
+    -fx-alignment: CENTER;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+}
+
+/* Change the color of the scrollbar track */
+.table-view .scroll-bar:vertical .track {
+    -fx-background-color: #CCCCCC; /* Change to your desired color */
+}
+
+/* Change the color of the scrollbar thumb */
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #666666; /* Change to your desired color */
+}
+
+.app-bar {
+    -fx-background-color: #f1f4f8; /* Dark background for the app bar */
+    -fx-padding: 10px; /* Padding around the app bar */
+}
+
+.app-bar-title {
+    -fx-text-fill: black;
+    -fx-font-size: 30px; /* Larger font size for the title */
+    -fx-font-weight: bold; /* Make the title bold */
+}
+
+
+
